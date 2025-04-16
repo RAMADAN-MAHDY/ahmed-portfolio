@@ -1,0 +1,14 @@
+/* ملف CSS مخصص */
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(84, 68, 84, 0.5); /* لون التأثير */
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.imageContainer:hover::before {
+  opacity: 1;
+}

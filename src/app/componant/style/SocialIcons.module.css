@@ -1,0 +1,35 @@
+@keyframes spinLight {
+    0% {
+      transform: rotate(0deg);
+      border-color: rgb(0, 110, 255);
+      top : 0;
+      left : 0;
+    }
+    50% {
+        top : 0;
+        left: 90%; 
+      transform: rotate(380deg);
+      border-color: rgb(0, 110, 255);
+    }
+    60% {
+        top : 100%;
+        left: 90%; 
+      transform: rotate(980deg);
+      border-color: rgb(255, 72, 0);
+    }
+    70% {
+        top : 100%;
+        left: 0%; 
+      transform: rotate(180deg);
+      border-color: rgb(0, 38, 255);
+    }
+    100% {
+      transform: rotate(960deg);
+      border-color: rgb(255, 0, 179);;
+    }
+  }
+  
+  .spinLight {
+    animation: spinLight 4s linear infinite;
+  }
+  
