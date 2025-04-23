@@ -65,6 +65,7 @@ const ProjectForm = () => {
   return (
     <div className="max-w-lg mx-auto mt-8 p-4 bg-white dark:bg-[#24292485] rounded-lg shadow">
       <h2 className="text-xl font-semibold mb-4">إضافة مشروع جديد</h2>
+        <h3 className="text-sm text-[#ff0000] mb-4"> (تنبيه \ قم باضافة ثلاث مشاريع كحد ادني ليتم عرضهم )</h3>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

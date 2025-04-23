@@ -150,7 +150,8 @@ const MyProjects = () => {
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white mt-6 sm:mt-[54px]">
         سابقه أعمالي
       </h2>
-
+{(projects.length < 2 && currentPath !== "/admin")&& <h2 className="text-3xl font-bold text-center  mb-8 text-[#f00] dark:text-white mt-6 sm:mt-[54px]">     (    لم يتم اضافة المشاريع     ) </h2>}
+{(currentPath === "/admin" && projects.length < 2) && <h2 className="text-3xl font-bold text-center  mb-8 text-[#f00] dark:text-white mt-6 sm:mt-[54px]">     (ملحوظه لن يتم عرض اقل من 3 مشاريع في الموقع) </h2>}
       <div className="relative pl-10 ">
         <div className="timeline-line absolute left-5 top-0 bottom-0 w-1 bg-gray-300 dark:bg-gray-600 origin-top scale-y-0"></div>
 
