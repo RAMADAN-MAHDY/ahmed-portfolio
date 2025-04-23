@@ -6,6 +6,8 @@ import AddImage from "@/app/componant/adminComponent/addImage";
 import { useEffect, useState } from "react";
 
 const AdminPage = () => {    
+    const ApiUrl = process.env.NEXT_PUBLIC_API_URL ;
+
     const [currentPathAddPro, setCurrentPathAddPro] = useState(false);
     const [currentPathAddImage, setCurrentPathAddImage] = useState(false);
     const [currentPathUpdate, setCurrentPathUpdate] = useState(false);
@@ -18,7 +20,7 @@ const AdminPage = () => {
     useEffect(() => {
         const checkSession = async () => {
             try {
-                const res = await fetch("http://localhost:5000/api/admin/check-session", {
+                const res = await fetch(`${ApiUrl}/admin/check-session`, {
                     method: "GET",
                     credentials: "include", // إرسال الكوكيز مع الطلب
                 });
@@ -40,7 +42,7 @@ const AdminPage = () => {
 
     const handleLogin = async () => {
         try {
-            const res = await fetch("http://localhost:5000/api/admin/login", {
+            const res = await fetch(`${ApiUrl}/admin/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
